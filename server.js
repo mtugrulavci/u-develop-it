@@ -26,6 +26,9 @@ const db = mysql.createConnection(
 
 );
 
+db.query (`SELECT * FROM candidates`, (err,rows)=>{
+    console.log(rows);
+});
 
 
 app.listen(PORT, ()=>{
